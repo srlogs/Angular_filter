@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
     if (!searchText) return items;
     searchText = searchText.toLowerCase();
     return items.filter(it => {
-      return it.CountryName.toLowerCase().includes(searchText) || it.CountryCode.toLowerCase().includes(searchText) || it.Capital.toLowerCase().includes(searchText) || it.ContinentName.toLowerCase().includes(searchText);
+      return it.name.toLowerCase().includes(searchText) || it.alpha2Code.toLowerCase().includes(searchText) || it.capital.toLowerCase().includes(searchText) || it.region.toLowerCase().includes(searchText);
     });
   }
 
