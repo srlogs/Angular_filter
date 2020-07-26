@@ -1,18 +1,33 @@
 <p>All country data</p>
+
+
 <div class="md-form mt-0">
   <input class="form-control" [(ngModel)]="searchText" type="text" placeholder="Search" aria-label="Search">
 </div>
 
-<br><br>
-<div *ngFor= "let item of items | filter : searchText">
-<div class="card">
-  <h5 class="card-header">{{item.name}}</h5>
-  <div class="card-body">
-    <p class="card-text">Country Code : {{item.alpha2Code}}</p>
-    <p class="card-text">Country Capital : {{item.capital}}</p>
-    <p class="card-text">Country Region : {{item.region}}</p>
-    <p class="card-text">Country Subregion : {{item.subregion}}</p>
+<!-- Example split danger button -->
+<!-- <div class="btn-group">
+  <button type="button" class="btn btn-danger">Country Name</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu" *ngFor="let item of items">
+    <a class="dropdown-item" href="#">{{item.name}}</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
   </div>
-</div>
-<br>
+</div> -->
+
+<br><br>
+<div *ngFor="let item of items | filter : searchText">
+  <div class="card">
+    <h5 class="card-header">{{item.CountryName}}</h5>
+    <div class="card-body">
+      <p class="card-text">Country Code : {{item.CountryCode}}</p>
+      <p class="card-text">Country Capital : {{item.Capital}}</p>
+      <p class="card-text">Country Region : {{item.ContinentName}}</p>
+      <!-- <p class="card-text">Country Subregion : {{item.subregion}}</p> -->
+    </div>
+  </div>
+  <br>
 </div>

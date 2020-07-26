@@ -11,7 +11,7 @@ export class CountryService {
   constructor(private http: HttpClient) { }
   getService(): Observable<any> {
     return this.http.get(
-      "https://restcountries.eu/rest/v2/all"
+      "https://sudharsana-countriesrestapi.azurewebsites.net/api/Countries/Countries"
     ).pipe(
       catchError(err => {
         console.log(err)
@@ -20,7 +20,7 @@ export class CountryService {
     );
   }
   getAllCountry() : Observable<any>{
-    return this.http.get("https://restcountries.eu/rest/v2/all")
+    return this.http.get("https://sudharsana-countriesrestapi.azurewebsites.net/api/Countries/Countries")
   }
 
 }

@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 export class HomeComponent implements OnInit {
 
   items : any;
-
+  searchText : string;
   constructor(private countryService : CountryService) {
     this.countryService.getAllCountry().subscribe(
       data => {
