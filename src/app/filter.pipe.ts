@@ -4,13 +4,13 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-  searchText : string;
+  
   transform(items: any[], searchText: string): any[] {
     if (!items) return [];
     if (!searchText) return items;
     searchText = searchText.toLowerCase();
     return items.filter(it => {
-      return it.name.toLowerCase().includes(searchText) || it.alpha2Code.toLowerCase().includes(searchText) || it.capital.toLowerCase().includes(searchText) || it.region.toLowerCase().includes(searchText);
+      return it.name.toLowerCase().includes(searchText) || it.alpha3Code.toLowerCase().includes(searchText) || it.capital.toLowerCase().includes(searchText) || it.region.toLowerCase().includes(searchText);
     });
   }
 

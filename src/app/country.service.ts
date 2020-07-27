@@ -23,4 +23,16 @@ export class CountryService {
     return this.http.get("https://restcountries.eu/rest/v2/all")
   }
 
+  getCountryData(value) : Observable<any>{
+    return this.http.get(`https://restcountries.eu/rest/v2/alpha/${value}`);
+  }
+
+  getContinent(value) : Observable<any>{
+    return this.http.get(`https://restcountries.eu/rest/v2/region/${value}`);
+  }
+
+  getCapital(value) : Observable<any> {
+    return this.http.get(`https://restcountries.eu/rest/v2/capital/${value}`);
+  }
+
 }

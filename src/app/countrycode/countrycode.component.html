@@ -1,0 +1,17 @@
+<p>countrycode works!</p>
+
+<input type="text" class="form-control"  #myInput   (keydown.enter)="OnInput(myInput.value)">
+
+<br><br>
+<!-- <div *ngFor="let item of countryData"> -->
+  <div class="card" *ngIf = "show">
+    <h5 class="card-header">{{countryData.name}}</h5>
+    <div class="card-body">
+      <p class="card-text">Country Code : {{countryData.alpha3Code}}</p>
+      <p class="card-text">Country Capital : {{countryData.capital}}</p>
+      <p class="card-text">Country Region : {{countryData.region}}</p>
+
+    </div>
+  </div>
+  <br>
+<!-- </div> -->
